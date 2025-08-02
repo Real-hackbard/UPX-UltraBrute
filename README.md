@@ -10,16 +10,14 @@ Download : https://github.com/upx/upx/releases/tag/v5.0.2
 Programs and libraries compressed by UPX are completely self-contained and run exactly as before, with no runtime or memory penalty for most of the supported formats.
 
 UPX supports a number of different executable formats, including Windows programs and DLLs, macOS apps and Linux executables.
-
 UPX is free software distributed under the term of the GNU General Public License. Full source code is available.
-
 UPX may be distributed and used freely, even with commercial applications.
 
 
 ![UPXUltraBrute](https://github.com/user-attachments/assets/de251eac-1e6d-475b-89b7-d3cfa9c80c8c)
 
 
-Overview
+Overview:
 UPX strengths in a nutshell:
 
 secure: as UPX is documented Open Source since many years any relevant Security/Antivirus software is able to peek inside UPX compressed apps to verify them
@@ -33,13 +31,13 @@ extendable: because of the class layout it's very easy to add new executable for
 free: UPX is distributed with full source code under the terms of the GNU General Public License v2+; either under the pure GPLv2+, or (at your option) under the GPLv+2 with special exceptions and restrictions granting the free usage for all binaries including commercial programs as stated in the UPX License Agreement
 You probably understand now why we call UPX the "Ultimate Packer for eXecutables"
 
-Copyright
+Copyright:
 UPX is Copyright © 2024 by Markus F.X.J. Oberhumer, László Molnár & John F. Reiser.
 
 The term UPX is a shorthand for the Ultimate Packer for eXecutables. All trademarks, brands, and names are the property of their respective owners.
 
-
 Commands:
+
 Compress
 This is the default operation, eg. upx yourfile.exe will compress the file specified on the command line.
 
@@ -86,7 +84,8 @@ UPX handles overlays like many other executable packers do: it simply copies the
                     program crash or otherwise unusable.
 
   --overlay=skip    Refuse to compress any program which has an overlay.
-Environment Variable
+
+Environment Variable:
 The environment variable UPX can hold a set of default options for UPX. These options are interpreted first and can be overwritten by explicit command line parameters. For example:
 
     for DOS/Windows:   set UPX=-9 --compress-icons#0
