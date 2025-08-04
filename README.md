@@ -1,5 +1,13 @@
 # UPX-UltraBrute:
 
+```
+Compiler    : Delphi10 Seattle, 10.1 Berlin, 10.2 Tokyo, 10.3 Rio, 10.4 Sydney, 11 Alexandria, 12 Athens
+Components  : None
+Discription : Packer for Executables
+Last Update : 08/2025
+License     : Freeware
+```
+
 UPX is an advanced executable file compressor. UPX will typically reduce the file size of programs and DLLs by around 50%-70%, thus reducing disk space, network load times, download times and other distribution and storage costs.
 
 Download the latest version of UPX and copy the files to the destination folder.
