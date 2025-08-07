@@ -1,6 +1,6 @@
 # UPX-UltraBrute:
 
-```
+```ruby
 Compiler    : Delphi10 Seattle, 10.1 Berlin, 10.2 Tokyo, 10.3 Rio, 10.4 Sydney, 11 Alexandria, 12 Athens
 Components  : None
 Discription : Packer for Executables
@@ -26,7 +26,7 @@ UPX may be distributed and used freely, even with commercial applications.
 
 
 ### Overview:
-UPX strengths in a nutshell:
+### UPX strengths in a nutshell:
 
 secure: as UPX is documented Open Source since many years any relevant Security/Antivirus software is able to peek inside UPX compressed apps to verify them
 excellent compression ratio: typically compresses better than Zip, use UPX to decrease the size of your distribution!
@@ -59,6 +59,7 @@ The -t command tests the integrity of the compressed and uncompressed data, eg. 
 The -l command prints out some information about the compressed files specified on the command line as parameters, eg upx -l yourfile.exe shows the compressed / uncompressed size and the compression ratio of yourfile.exe.
 
 ### Options:
+```
 -q: be quiet, suppress warnings-q 
 -q(or -qq): be very quiet, suppress errors-q 
 -q -q(or -qqq): produce no output at all
@@ -66,17 +67,17 @@ The -l command prints out some information about the compressed files specified 
 --exact: when compressing, require to be able to get a byte-identical file after decompression with option 
 -d. [NOTE: this is work in progress and is not supported for all formats yet. If you do care, as a workaround you can compress and then decompress your program a first time - any further compress-decompress steps should then yield byte-identical results as compared to the first decompressed version.]
 -k: keep backup files-o file
+```
 
 Compression Levels & Tuning
 UPX offers ten different compression levels from -1 to -9, and --best.  The default compression level is -8 for files smaller than 512 KiB, and -7 otherwise.
 
+```
 Compression levels 1, 2 and 3 are pretty fast.
-
 Compression levels 4, 5 and 6 achieve a good time/ratio performance.
-
 Compression levels 7, 8 and 9 favor compression ratio over speed.
-
 Compression level --best may take a long time.
+```
 
 Note that compression level --best can be somewhat slow for large files, but you definitely should use it when releasing a final version of your program.
 
@@ -94,6 +95,7 @@ Info: An "overlay" means auxiliary data attached after the logical end of an exe
 
 UPX handles overlays like many other executable packers do: it simply copies the overlay after the compressed image. This works with some files, but doesn't work with others, depending on how an application actually accesses this overlaid data.
 
+```
   --overlay=copy    Copy any extra data attached to the file. [DEFAULT]
 
   --overlay=strip   Strip any overlay from the program instead of
@@ -101,6 +103,7 @@ UPX handles overlays like many other executable packers do: it simply copies the
                     program crash or otherwise unusable.
 
   --overlay=skip    Refuse to compress any program which has an overlay.
+```
 
 Environment Variable:
 The environment variable UPX can hold a set of default options for UPX. These options are interpreted first and can be overwritten by explicit command line parameters. For example:
